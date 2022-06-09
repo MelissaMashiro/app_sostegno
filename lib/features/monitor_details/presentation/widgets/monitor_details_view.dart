@@ -159,8 +159,7 @@ class _MonitorDetailsViewState extends State<MonitorDetailsView> {
                               height: 20,
                             ),
                             Column(
-                              children:
-                                  monitor.porcentajes.map<Widget>((item) {
+                              children: monitor.porcentajes.map<Widget>((item) {
                                 return MateriaPercentWidget(
                                   porcentaje: item,
                                 );

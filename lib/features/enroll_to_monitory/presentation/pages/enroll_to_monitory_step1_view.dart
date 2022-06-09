@@ -62,7 +62,6 @@ class _EnrollStep1PageState extends State<EnrollStep1Page> {
                   } else if (state is MateriasRetrieved) {
                     _allMaterias = state.materias;
                   } else if (state is MonitoresRetrieved) {
-                    print('MONITORES TRAIDOS STATE----->${state.monitores}');
                     _actualMonitor = null;
                     _allMonitores = state.monitores;
                   } else if (state is MonitoriesRetrieved) {

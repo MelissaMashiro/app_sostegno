@@ -1,10 +1,10 @@
-import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:app_sostegno/core/error/failure.dart';
 import 'package:app_sostegno/core/storage/shared_preferences.dart';
 import 'package:app_sostegno/features/enroll_to_monitory/data/enroll_to_monitory_data.dart';
 import 'package:app_sostegno/features/monitories/domain/usecases/get_materias_by_monitor_with_code.dart';
 import 'package:app_sostegno/features/monitory_creation/domain/usecases/create_monitory.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'monitory_creation_event.dart';
 part 'monitory_creation_state.dart';
@@ -55,8 +55,6 @@ class MonitoryCreationBloc
     Emitter<MonitoryCreationState> emit,
   ) async {
     emit(LoadingState());
-    print('DATA  MONITORIA=> $newMonitoryData');
-    print('DATA  MONITORIA=> $newMonitoryData');
     final result = await createMonitory(body: newMonitoryData);
 
     emit(

@@ -17,10 +17,10 @@ class CreateMonitoryForm extends StatefulWidget {
   const CreateMonitoryForm({Key? key, this.preData}) : super(key: key);
   final Request? preData;
   @override
-  _CreateMonitoryFormState createState() => _CreateMonitoryFormState();
+  CreateMonitoryFormState createState() => CreateMonitoryFormState();
 }
 
-class _CreateMonitoryFormState extends State<CreateMonitoryForm> {
+class CreateMonitoryFormState extends State<CreateMonitoryForm> {
   late Request preData;
   Map<String, dynamic> _newMonitoryData = {};
   List<MonitorMonitoria> _materias = [];
@@ -274,7 +274,6 @@ class _CreateMonitoryFormState extends State<CreateMonitoryForm> {
                               cursorColor: Colors.black45,
                               keyboardType: TextInputType.multiline,
                               onSaved: (val) {
-                                print('ENTRE A ONSAVED');
                                 _newMonitoryData['detalles'] = val;
                                 _newMonitoryData['modality'] =
                                     _virtualSelected ? 0 : 1;
@@ -307,7 +306,6 @@ class _CreateMonitoryFormState extends State<CreateMonitoryForm> {
                               cursorColor: Colors.black45,
                               keyboardType: TextInputType.multiline,
                               onSaved: (val) {
-                                print('ENTRE A ONSAVED');
                                 _newMonitoryData['detalles'] = val;
                                 _newMonitoryData['modality'] =
                                     _virtualSelected ? 0 : 1;

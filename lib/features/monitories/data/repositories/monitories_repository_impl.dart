@@ -44,7 +44,6 @@ class MonitoriesRepositoryImpl implements MonitoriesRepository {
   Future<Either<Failure, List<AvailableMonitory>>>
       getStudentEnrolledMonitories() async {
     if (await networkInfo.isConnected) {
-      print('Conectado');
       try {
         final remoteMonitoriesList =
             await remoteDataSource.getStudentEnrolledMonitories();
@@ -56,7 +55,6 @@ class MonitoriesRepositoryImpl implements MonitoriesRepository {
             ServerFailure(msg: 'Error al pedir detalles del monitor'));
       }
     } else {
-      print('desconectao');
 
       try {
         final localMonitoriesList =
@@ -97,7 +95,6 @@ class MonitoriesRepositoryImpl implements MonitoriesRepository {
   Future<Either<Failure, List<AvailableMonitory>>>
       getMonitoriesByMonitor() async {
     if (await networkInfo.isConnected) {
-      print('Conectado');
       try {
         final myRemoteMonitoriesList =
             await remoteDataSource.getMonitoriesByMonitor();
@@ -109,7 +106,6 @@ class MonitoriesRepositoryImpl implements MonitoriesRepository {
             ServerFailure(msg: 'Error al pedir detalles del monitor'));
       }
     } else {
-      print('desconectao');
 
       try {
         final myLocalMonitoriesList =

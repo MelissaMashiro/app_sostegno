@@ -105,7 +105,7 @@ class User {
   final String lastName;
   final String cedula;
   final String imagen;
-  final Entidad entidad;
+  final Entidad? entidad;
 
   factory User.fromMap(Map<String, dynamic> json) => User(
         email: json["email"],
@@ -113,7 +113,8 @@ class User {
         lastName: json["last_name"],
         cedula: json["cedula"],
         imagen: json["imagen"],
-        entidad: Entidad.fromMap(json["entidad"]),
+        entidad:
+            json["entidad"] != null ? Entidad.fromMap(json["entidad"]) : null,
       );
 
   Map<String, dynamic> toMap() => {
@@ -122,7 +123,7 @@ class User {
         "last_name": lastName,
         "cedula": cedula,
         "imagen": imagen,
-        "entidad": entidad.toMap(),
+        "entidad": entidad?.toMap(),
       };
 }
 

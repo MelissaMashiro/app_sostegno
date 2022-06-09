@@ -11,10 +11,10 @@ class LoadingPage extends StatefulWidget {
   const LoadingPage({Key? key}) : super(key: key);
 
   @override
-  _LoadingPageState createState() => _LoadingPageState();
+  LoadingPageState createState() => LoadingPageState();
 }
 
-class _LoadingPageState extends State<LoadingPage> with AfterLayoutMixin {
+class LoadingPageState extends State<LoadingPage> with AfterLayoutMixin {
   @override
   void afterFirstLayout(BuildContext context) {
     _check(); //revisa si aun no vencen los token
@@ -24,13 +24,10 @@ class _LoadingPageState extends State<LoadingPage> with AfterLayoutMixin {
   _check() async {
     final userEntity = (await sharedPreferences.getUser());
     if (userEntity != null) {
-      print("Ha logueado");
       Get.offNamed(RoutesName.My_CALENDAR);
     } else {
-      print("deslogueado");
       Get.offNamed(RoutesName.LOGIN_PAGE);
     }
-    //Get.offNamed(RoutesName.LOGIN_PAGE);
   }
 
   @override

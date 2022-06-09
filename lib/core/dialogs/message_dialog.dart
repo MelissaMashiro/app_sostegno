@@ -37,7 +37,7 @@ Future errorDialog(BuildContext context,
               title: title,
               descriptions: msg,
               onPressedOk: action,
-              iconPath: 'errorIcon.svg',
+              iconPath: 'cancelar.svg',
             );
           })
       : showDialog(
@@ -46,9 +46,10 @@ Future errorDialog(BuildContext context,
             return MyCustomMessageDialog(
               title: title,
               descriptions: msg,
-              iconPath: 'errorIcon.svg',
+              iconPath: 'cancelar.svg',
             );
-          });
+          },
+        );
 }
 
 class MyCustomMessageDialog extends StatefulWidget {

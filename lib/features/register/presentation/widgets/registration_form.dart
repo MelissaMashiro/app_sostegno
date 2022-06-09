@@ -42,7 +42,6 @@ class RegistrationFormState extends State<RegistrationForm> {
     return BlocConsumer<RegistrationBloc, RegistrationState>(
       listener: (context, state) {
         if (state is UniversitiesRetrieved) {
-          print(state.universities);
         }
       },
       builder: (context, state) {

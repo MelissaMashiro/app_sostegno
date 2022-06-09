@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 class RoutesName {
   static const String LOADING_PAGE = '/';
   static const String LOGIN_PAGE = '/login';

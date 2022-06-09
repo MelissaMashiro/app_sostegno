@@ -13,10 +13,10 @@ class CreateMonitoryPage extends StatefulWidget {
   const CreateMonitoryPage({Key? key}) : super(key: key);
 
   @override
-  _CreateMonitoryPageState createState() => _CreateMonitoryPageState();
+  CreateMonitoryPageState createState() => CreateMonitoryPageState();
 }
 
-class _CreateMonitoryPageState extends State<CreateMonitoryPage> {
+class CreateMonitoryPageState extends State<CreateMonitoryPage> {
   final bool hasPreData = Get.arguments['hasPreData'];
   Request? _preData;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();

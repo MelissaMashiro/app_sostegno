@@ -56,7 +56,7 @@ class EnrollToMonitoryBloc
     emit(LoadingState());
 
     final failOrMonitores =
-        await getMonitoresByMateria(codigoMateria: event.materia.id);
+        await getMonitoresByMateria(codigoMateria: event.materia.materia.id);
 
     emit(
       failOrMonitores.fold(
@@ -73,7 +73,6 @@ class EnrollToMonitoryBloc
   Future<void> _doSearch(
       DoSearchEvent event, Emitter<EnrollToMonitoryState> emit) async {
     emit(LoadingState());
-    print('BUSCANDO---->...');
     final failOrMonitories = await getAvailableMonitories(
       materia: event.materia,
       monitor: event.monitor,

@@ -25,10 +25,10 @@ class UniversitiesDropdown extends StatefulWidget {
   final bool? requireed;
 
   @override
-  _UniversitiesDropdownState createState() => _UniversitiesDropdownState();
+  UniversitiesDropdownState createState() => UniversitiesDropdownState();
 }
 
-class _UniversitiesDropdownState extends State<UniversitiesDropdown> {
+class UniversitiesDropdownState extends State<UniversitiesDropdown> {
   @override
   Widget build(BuildContext context) {
     return Container(

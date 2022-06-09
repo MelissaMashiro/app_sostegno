@@ -15,13 +15,13 @@ class MakeMonitoryRequestForm extends StatefulWidget {
   const MakeMonitoryRequestForm({Key? key}) : super(key: key);
 
   @override
-  _MakeMonitoryRequestFormState createState() =>
-      _MakeMonitoryRequestFormState();
+  MakeMonitoryRequestFormState createState() =>
+      MakeMonitoryRequestFormState();
 }
 
 List<CustomMateria> _materias = [];
 
-class _MakeMonitoryRequestFormState extends State<MakeMonitoryRequestForm> {
+class MakeMonitoryRequestFormState extends State<MakeMonitoryRequestForm> {
   Map<String, dynamic> _newRequestData = {};
 
   CustomMateria? _asignatureSelected;

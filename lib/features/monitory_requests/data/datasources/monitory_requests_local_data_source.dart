@@ -9,6 +9,7 @@ abstract class MonitoryRequestsLocalDataSource {
   Future<void> saveRequestedMonitories(List<Request> requests);
 }
 
+// ignore: constant_identifier_names
 const CACHED_REQUESTED_MONITORIES = 'CACHED_REQUESTED_MONITORIES';
 
 class MonitoryRequestsLocalDataSourceImpl

@@ -25,10 +25,10 @@ class PocentajeDropdown extends StatefulWidget {
   final bool? requireed;
 
   @override
-  _PocentajeDropdownState createState() => _PocentajeDropdownState();
+  PocentajeDropdownState createState() => PocentajeDropdownState();
 }
 
-class _PocentajeDropdownState extends State<PocentajeDropdown> {
+class PocentajeDropdownState extends State<PocentajeDropdown> {
   @override
   Widget build(BuildContext context) {
     return Container(

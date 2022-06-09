@@ -31,11 +31,8 @@ class RegisterRemoteDataSourceImpl implements RegisterRemoteDataSource {
       );
       listaUniversities =
           resp.data.map<University>((e) => University.fromMap(e)).toList();
-
-      print('UNIVERSIDADES CORRECTAMENTE------------------->');
       return listaUniversities;
     } catch (e) {
-      print(e);
       throw ServerException();
     }
   }
@@ -52,14 +49,11 @@ class RegisterRemoteDataSourceImpl implements RegisterRemoteDataSource {
         "first_name": body['first_name'],
         "last_name": body['last_name']
       };
-      print(data);
       await dio.post(
         AppEndpoints.register,
         data: data,
       );
-      print('REGISTRO CORRECTAMENTE------------------->');
     } catch (e) {
-      print(e);
       throw ServerException();
     }
   }

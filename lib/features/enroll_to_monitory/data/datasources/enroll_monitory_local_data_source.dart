@@ -7,7 +7,7 @@ abstract class EnrollMonitoryLocalDataSource {
   Future<List<CustomMateria>> getLastMaterias();
 }
 
-const CACHED_AVAILABLE_MONITORIES = 'CACHED_AVAILABLE_MONITORIES';
+// ignore: constant_identifier_names
 const CACHED_MATERIAS = 'CACHED_MATERIAS';
 
 class EnrollMonitoryLocalDataSourceImpl

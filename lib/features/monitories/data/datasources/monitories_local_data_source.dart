@@ -11,7 +11,9 @@ abstract class MonitoriesLocalDataSource {
   Future<void> saveMonitorMonitories(List<AvailableMonitory> monitories);
 }
 
+// ignore: constant_identifier_names
 const CACHED_ENROLLED_MONITORIES = 'CACHED_ENROLLED_MONITORIES';
+// ignore: constant_identifier_names
 const CACHED_OWN_MONITORIES = 'CACHED_OWN_MONITORIES';
 
 class MonitoriesLocalDataSourceImpl implements MonitoriesLocalDataSource {

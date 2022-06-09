@@ -56,7 +56,6 @@ class _MonitorMonitoriesPageState extends State<MonitorMonitoriesPage> {
                   _monitorMonitories = state.monitories;
                   _monitorMaterias = state.materias;
                 } else if (state is MonitoriesByMateriaRetrieved) {
-                  print('Monitorias traidas ========> ${state.monitories}');
                   setState(() {
                     _monitorMonitories = state.monitories;
                   });
@@ -123,7 +122,6 @@ class _MonitorMonitoriesPageState extends State<MonitorMonitoriesPage> {
                           child: ListView.builder(
                             itemCount: _monitorMonitories.length,
                             itemBuilder: (context, index) {
-                              print('Buildeando listview');
                               return MonitoryCard(
                                 monitory: _monitorMonitories[index],
                                 verButton: () {

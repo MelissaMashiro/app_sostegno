@@ -41,7 +41,6 @@ class MonitoriesRemoteDataSourceImpl implements MonitoriesRemoteDataSource {
 
       await dio.delete(
         '${AppEndpoints.deleteMonitory}$codMonitory/',
-        // data: {'idEstudiante': userData!.person.id},
         options: Options(
           headers: {
             HttpHeaders.authorizationHeader: 'Token ${userData!.accessToken}',
@@ -108,7 +107,6 @@ class MonitoriesRemoteDataSourceImpl implements MonitoriesRemoteDataSource {
       final monitor = AvailableMonitor.fromMap(resp.data);
       return monitor.porcentajes;
     } catch (e) {
-      print(e);
       throw ServerException();
     }
   }
@@ -130,7 +128,6 @@ class MonitoriesRemoteDataSourceImpl implements MonitoriesRemoteDataSource {
       final monitor = AvailableMonitor.fromMap(resp.data);
       return monitor.porcentajes;
     } catch (e) {
-      print(e);
       throw ServerException();
     }
   }

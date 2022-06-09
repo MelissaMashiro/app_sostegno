@@ -34,7 +34,6 @@ class AuthenticationRemoteDataSourceImpl
       final userEntity = UserEntity.fromMap(resp.data);
       return userEntity;
     } catch (e) {
-      print(e);
       throw ServerException();
     }
   }
@@ -42,7 +41,6 @@ class AuthenticationRemoteDataSourceImpl
   @override
   Future<void> logout() async {
     try {
-      print('deslogueao');
     } catch (e) {
       throw ServerException();
     }

@@ -71,7 +71,6 @@ class MonitoryCreationRemoteDataSourceImpl
             },
           ),
         );
-        print('SOLICITUD ELIMINADA--> GOOD');
       }
     } catch (e) {
       throw ServerException();

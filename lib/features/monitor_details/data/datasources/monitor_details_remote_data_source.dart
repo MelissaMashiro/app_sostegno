@@ -40,7 +40,6 @@ class MonitorDetailsRemoteDataSourceImpl
 
       return monitor;
     } catch (e) {
-      print(e);
       throw ServerException();
     }
   }

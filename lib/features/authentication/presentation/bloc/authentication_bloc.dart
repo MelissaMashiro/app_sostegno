@@ -19,7 +19,6 @@ class AuthenticationBloc
   }
   UserEntity? _userEntity;
   UserEntity? get userEntity {
-    print(_userEntity);
     return _userEntity;
   }
 

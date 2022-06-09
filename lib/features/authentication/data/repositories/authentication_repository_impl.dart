@@ -24,7 +24,6 @@ class AuthenticationRepositoryImpl implements AuthenticationRepository {
     try {
       final remoteUser =
           await remoteDataSource.login(email, password, userType);
-      print('RECORDEMOS QUE ESTUDIANTE ES: 1 Y MONITOR ES 2');
       localDataSource.saveAuthenticationData(remoteUser);
       return Right(remoteUser);
     } on ServerException {

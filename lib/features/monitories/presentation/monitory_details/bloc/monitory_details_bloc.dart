@@ -1,9 +1,9 @@
-import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:app_sostegno/core/error/failure.dart';
 import 'package:app_sostegno/features/enroll_to_monitory/data/enroll_to_monitory_data.dart';
 import 'package:app_sostegno/features/monitories/domain/usecases/cancel_monitory.dart';
 import 'package:app_sostegno/features/monitories/domain/usecases/get_monitory_details.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'monitory_details_event.dart';
 part 'monitory_details_state.dart';

@@ -29,7 +29,6 @@ class MonitoryRequestCreationRemoteDataSourceImpl
   Future<void> createMonitoryRequest({
     required Map<String, dynamic> body,
   }) async {
-    print('Data recibida---> $body');
     try {
       final userData = await sharedPreferences.getUser();
 
@@ -38,7 +37,7 @@ class MonitoryRequestCreationRemoteDataSourceImpl
         'fin': body['horaFin'],
         'idMateria': body['materia'].id,
       };
-      final resp = await dio.post(
+      await dio.post(
         AppEndpoints.createRequest,
         data: data,
         options: Options(
@@ -47,7 +46,6 @@ class MonitoryRequestCreationRemoteDataSourceImpl
           },
         ),
       );
-      print('RESPUESTA=>${resp.data}');
     } catch (e) {
       throw ServerException();
     }
