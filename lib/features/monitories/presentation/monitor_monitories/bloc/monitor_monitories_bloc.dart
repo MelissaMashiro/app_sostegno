@@ -80,10 +80,12 @@ class MonitorMonitoriesBloc
     DoMateriaSelectedEvent event,
     Emitter<MonitorMonitoriesState> emit,
   ) async {
+    print('MATERIA SELECCIONADA---> ${event.codMateria}');
     List<AvailableMonitory> monitories = [];
 
     if (_monitories.isNotEmpty) {
       for (var m in _monitories) {
+        print('materia general--> ${m.monitorMonitoria.materia.id}');
         if (m.monitorMonitoria.materia.id == event.codMateria) {
           monitories.add(m);
         }

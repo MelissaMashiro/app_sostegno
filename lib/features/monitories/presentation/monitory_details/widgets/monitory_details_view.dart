@@ -7,7 +7,7 @@ import 'package:app_sostegno/core/widgets/text_icon_button.dart';
 import 'package:app_sostegno/features/enroll_to_monitory/data/models/available_monitory.dart';
 import 'package:app_sostegno/features/monitories/presentation/monitory_details/bloc/monitory_details_bloc.dart';
 import 'package:app_sostegno/routes/routes_name.dart';
-import 'package:url_launcher/url_launcher_string.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:intl/intl.dart';
 
 class MonitoryDetailsView extends StatefulWidget {
@@ -215,7 +215,8 @@ class _MonitoryDetailsViewState extends State<MonitoryDetailsView> {
                   GestureDetector(
                     onTap: () async {
                       if (_monitory!.modalidad == '0') {
-                        if (!await launchUrlString(_monitory!.detalles)) {
+                        final Uri url = Uri.parse(_monitory!.detalles);
+                        if (!await launchUrl(url)) {
                           throw 'Could not launch ${_monitory!.detalles}';
                         }
                       }

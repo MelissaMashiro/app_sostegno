@@ -190,7 +190,6 @@ class MateriaPercentWidget extends StatelessWidget {
   final MonitorMonitoria porcentaje;
   @override
   Widget build(BuildContext context) {
-    print('RESULTADO=>${180 - (porcentaje.porcentaje).toDouble()}');
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Row(
@@ -217,18 +216,17 @@ class MateriaPercentWidget extends StatelessWidget {
                 width: 180,
               ),
               Container(
-                  decoration: BoxDecoration(
-                    color: kMainPurpleColor.withOpacity(0.8),
-                    borderRadius: BorderRadius.circular(15.0),
-                    border: Border.all(
-                      width: 1,
-                      color: kMainPurpleColor,
-                    ),
+                decoration: BoxDecoration(
+                  color: kMainPurpleColor.withOpacity(0.8),
+                  borderRadius: BorderRadius.circular(15.0),
+                  border: Border.all(
+                    width: 1,
+                    color: kMainPurpleColor,
                   ),
-                  height: 20,
-                  width: 180
-                  //  width: 180 - (porcentaje.porcentaje).toDouble(),
-                  ),
+                ),
+                height: 20,
+                width: (porcentaje.porcentaje).toDouble() * 1.8,
+              ),
             ],
           ),
         ],

@@ -21,7 +21,7 @@ class MonitoriesCalendarBloc
   }) : super(MonitoriesCalendarInitial()) {
     on<InitialCalendarLoad>(
       (event, emit) {
-        if (event.userType == 0) {
+        if (event.userType == 2) {
           return _getMonitorMonitoriesToCalendar(event, emit);
         } else {
           return _getEnrolledMonitoriesToCalendar(event, emit);

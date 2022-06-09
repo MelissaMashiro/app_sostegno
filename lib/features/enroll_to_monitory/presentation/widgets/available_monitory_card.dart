@@ -40,7 +40,7 @@ class AvailableMonitoryCard extends StatelessWidget {
             vertical: 25.0,
             horizontal: 15.0,
           ),
-          height: 280,
+          height: 300,
           width: 200,
           decoration: BoxDecoration(
               color: Colors.white,

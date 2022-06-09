@@ -40,10 +40,10 @@ class _EnrollStep2PageState extends State<EnrollStep2Page> {
                     BlocConsumer<EnrollToMonitoryBloc, EnrollToMonitoryState>(
                   listener: (context, state) {
                     if (state is EnrolledStudentState) {
-                      errorDialog(
+                      messageDialog(
                         context,
-                        title: 'Error Inesperado',
-                        msg: 'Ha ocurrido un error, por favor intente de nuevo',
+                        title: 'Operación Exitosa!',
+                        msg: 'Inscripcion a monitoria realizada.',
                         action: () {
                           Get.offNamedUntil(
                             RoutesName.My_CALENDAR,

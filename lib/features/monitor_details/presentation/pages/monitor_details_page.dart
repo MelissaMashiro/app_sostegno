@@ -49,7 +49,6 @@ class _MonitorDetailsPageState extends State<MonitorDetailsPage> {
                         // height: mq.height,
                       ),
                       Container(
-                        //height: mq.height,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           gradient: LinearGradient(
