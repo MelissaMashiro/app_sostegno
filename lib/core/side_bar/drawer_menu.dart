@@ -82,15 +82,20 @@ class _InkWellDrawerState extends State<InkWellDrawer> {
                     const SizedBox(
                       height: 5,
                     ),
-                    const Text(
-                      'Melissa Alvarez',
-                      style: TextStyle(color: Colors.white, fontSize: 15.0),
+                    Text(
+                      "${user?.person.user.firstName ?? ''} ${user?.person.user.lastName ?? ''}",
+                      style:
+                          const TextStyle(color: Colors.white, fontSize: 15.0),
                     )
                   ],
                 ),
               ),
               const Divider(
-                  indent: 40, endIndent: 40, color: kGray, height: 15),
+                indent: 40,
+                endIndent: 40,
+                color: kGray,
+                height: 15,
+              ),
               CustomListTile(
                 icon: Icons.dashboard,
                 text: 'Dashboard',
