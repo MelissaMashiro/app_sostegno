@@ -178,7 +178,8 @@ class _MonitoryDetailsViewState extends State<MonitoryDetailsView> {
                     ),
                     onTap: () {
                       Get.toNamed(RoutesName.MONITOR_DETAILS, arguments: {
-                        'codMonitor': '${_monitory!.monitorMonitoria.id}',
+                        'codMonitor':
+                            '${_monitory!.monitorMonitoria.monitor!.id}',
                       });
                     },
                   ),

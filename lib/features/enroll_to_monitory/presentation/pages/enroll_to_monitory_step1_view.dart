@@ -86,10 +86,11 @@ class _EnrollStep1PageState extends State<EnrollStep1Page> {
                         ),
                         boxShadow: [
                           BoxShadow(
-                              blurRadius: 5,
-                              color: Colors.black12,
-                              offset: Offset(0, 2),
-                              spreadRadius: 2)
+                            blurRadius: 5,
+                            color: Colors.black12,
+                            offset: Offset(0, 2),
+                            spreadRadius: 2,
+                          )
                         ],
                       ),
                       padding: const EdgeInsets.all(20.0),

@@ -95,7 +95,7 @@ class EnrollMonitoryRemoteDataSourceImpl
           AppEndpoints.getMateriasByMateriaAndMonitor,
           data: {
             'idMateria': materia.id,
-            'idMonitor': monitor.id,
+            'idMonitor': monitor.monitor!.id,
           },
           options: Options(
             headers: {
