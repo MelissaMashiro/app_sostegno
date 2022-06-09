@@ -41,7 +41,7 @@ class MyCalendarCard extends StatelessWidget {
             vertical: 25.0,
             horizontal: 15.0,
           ),
-          height: 240,
+          height: 258,
           width: 200,
           decoration: BoxDecoration(
             color: Colors.white,

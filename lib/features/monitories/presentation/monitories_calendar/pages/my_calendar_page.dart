@@ -54,8 +54,6 @@ class _MyCalendarPageState extends State<MyCalendarPage> {
                   );
                 } else {
                   final personType = snapshot.data!.personType;
-                  print(
-                      'ESTE E SEL TYPO DE LA PERSONA LOGUEADA--->$personType ');
                   return Expanded(
                     child: BlocProvider(
                       create: (_) => sl<MonitoriesCalendarBloc>()

@@ -7,8 +7,8 @@ import 'package:app_sostegno/core/widgets/text_icon_button.dart';
 import 'package:app_sostegno/features/enroll_to_monitory/data/models/available_monitory.dart';
 import 'package:app_sostegno/features/monitories/presentation/monitory_details/bloc/monitory_details_bloc.dart';
 import 'package:app_sostegno/routes/routes_name.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:intl/intl.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MonitoryDetailsView extends StatefulWidget {
   const MonitoryDetailsView({
@@ -34,6 +34,7 @@ List days = [
 
 class _MonitoryDetailsViewState extends State<MonitoryDetailsView> {
   AvailableMonitory? _monitory;
+
   @override
   void initState() {
     _monitory = widget.monitorySelected;
@@ -73,6 +74,7 @@ class _MonitoryDetailsViewState extends State<MonitoryDetailsView> {
           }
         },
         builder: (context, state) {
+          final Uri toLaunch = Uri.parse(_monitory!.detalles);
           if (state is LoadingState) {
             return Center(
               child: Image.asset(
@@ -215,10 +217,9 @@ class _MonitoryDetailsViewState extends State<MonitoryDetailsView> {
                   GestureDetector(
                     onTap: () async {
                       if (_monitory!.modalidad == '0') {
-                        final Uri url = Uri.parse(_monitory!.detalles);
-                        if (!await launchUrl(url)) {
-                          throw 'Could not launch ${_monitory!.detalles}';
-                        }
+                        setState(() {
+                          _launchInBrowser(toLaunch);
+                        });
                       }
                     },
                     child: Text(
@@ -253,5 +254,14 @@ class _MonitoryDetailsViewState extends State<MonitoryDetailsView> {
         },
       ),
     );
+  }
+
+  Future<void> _launchInBrowser(Uri url) async {
+    if (!await launchUrl(
+      url,
+      mode: LaunchMode.externalApplication,
+    )) {
+      throw 'Could not launch $url';
+    }
   }
 }
