@@ -42,8 +42,9 @@ class RegisterRemoteDataSourceImpl implements RegisterRemoteDataSource {
     try {
       final data = {
         "email": body['email'],
-        "entidad": body['university'],
+        "entidad": 1, // body['university'],
         "codigo": body['studentCode'],
+        "codigo_registro": body['codigoRegistro'],
         "password": body['password'],
         "password_confirmation": body['password'],
         "first_name": body['first_name'],

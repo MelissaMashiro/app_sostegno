@@ -26,6 +26,7 @@ class AuthenticationRemoteDataSourceImpl
       final body = {
         'email': email,
         'password': password,
+        'auth_type': userType,
       };
       final resp = await dio.post(
         AppEndpoints.login,
@@ -40,8 +41,7 @@ class AuthenticationRemoteDataSourceImpl
 
   @override
   Future<void> logout() async {
-    try {
-    } catch (e) {
+    try {} catch (e) {
       throw ServerException();
     }
   }

@@ -29,7 +29,10 @@ class AuthenticationBloc
     emit(LoadingState());
 
     final result = await loginUser(
-        email: event.email, password: event.password, userType: event.userType);
+      email: event.email,
+      password: event.password,
+      userType: event.userType,
+    );
 
     emit(
       result.fold(

@@ -169,10 +169,6 @@ class _EnrollStep1PageState extends State<EnrollStep1Page> {
             materia: _actualMateria!,
             monitor: _actualMonitor,
           ));
-    } else {
-      // showErrorDialog(context,
-      //     title: 'Campos incompletos',
-      //     msg: 'Por favor, rectifique los datos ingresados');
-    }
+    } 
   }
 }

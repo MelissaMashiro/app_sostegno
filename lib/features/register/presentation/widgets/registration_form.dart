@@ -5,7 +5,6 @@ import 'package:app_sostegno/core/utils/validation_methods.dart';
 import 'package:app_sostegno/features/register/domain/entities/university_entity.dart';
 import 'package:app_sostegno/features/register/presentation/widgets/registration_text_field.dart';
 import 'package:app_sostegno/features/register/presentation/bloc/registration_bloc.dart';
-import 'package:app_sostegno/features/register/presentation/widgets/universities_dropdown.dart';
 
 class RegistrationForm extends StatefulWidget {
   const RegistrationForm({Key? key, required this.uniList}) : super(key: key);
@@ -16,11 +15,11 @@ class RegistrationForm extends StatefulWidget {
 
 class RegistrationFormState extends State<RegistrationForm> {
   Map<String, dynamic> _newUserData = {};
-  //List<University> universities = [];
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _lastnameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _studentcodeController = TextEditingController();
+  final TextEditingController _registercodeController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
   bool _isHidden = true;
@@ -41,21 +40,33 @@ class RegistrationFormState extends State<RegistrationForm> {
     _newUserData = context.watch<RegistrationBloc>().newUserData;
     return BlocConsumer<RegistrationBloc, RegistrationState>(
       listener: (context, state) {
-        if (state is UniversitiesRetrieved) {
-        }
+        if (state is UniversitiesRetrieved) {}
       },
       builder: (context, state) {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            UniversitiesDropdown(
+            /* UniversitiesDropdown(
               actualValue: _newUserData['university'],
               hintText: 'Seleccione su Universidad',
               itemList: widget.uniList,
               onChanged: (opt) {},
               onSaved: (val) {
                 _newUserData['university'] = val.id;
+              },
+            ),
+            */
+            RegistrationTextField(
+              backgroundColor: const Color(0xFF282F3F),
+              controller: _registercodeController,
+              hintText: 'Codigo de Registro',
+              icon: const Icon(
+                Icons.qr_code,
+                color: kMainPinkColor,
+              ),
+              onSaved: (val) {
+                _newUserData['codigoRegistro'] = val;
               },
             ),
             RegistrationTextField(
