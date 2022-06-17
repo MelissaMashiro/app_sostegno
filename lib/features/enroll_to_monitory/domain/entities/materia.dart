@@ -24,19 +24,23 @@ class CustomMateria {
 
 class MateriaDetail {
   MateriaDetail({
+    required this.codigo,
     required this.id,
     required this.nombre,
   });
 
+  final String codigo;
   final int id;
   final String nombre;
 
   factory MateriaDetail.fromMap(Map<String, dynamic> json) => MateriaDetail(
+        codigo: json["codigo"],
         id: json["id"],
         nombre: json["nombre"],
       );
 
   Map<String, dynamic> toMap() => {
+        "codigo": codigo,
         "id": id,
         "nombre": nombre,
       };

@@ -63,7 +63,7 @@ class _MonitorDetailsViewState extends State<MonitorDetailsView> {
                       height: 10,
                     ),
                     Text(
-                      'Universidad ${monitor.user.entidad!.nombre}',
+                      ' ${monitor.user.entidad!.nombre}',
                       style: const TextStyle(
                         fontWeight: FontWeight.w400,
                       ),

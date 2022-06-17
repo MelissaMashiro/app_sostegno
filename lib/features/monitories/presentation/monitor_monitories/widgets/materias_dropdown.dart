@@ -71,7 +71,7 @@ class MateriasDropdownState extends State<MateriasDropdown> {
       list.add(
         DropdownMenuItem(
           value: item,
-          child: Text(item.materia.nombre),
+          child: Text('${item.materia.nombre} ${item.materia.codigo}'),
         ),
       );
     }
