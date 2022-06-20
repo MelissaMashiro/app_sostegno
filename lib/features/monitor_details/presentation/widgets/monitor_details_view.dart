@@ -63,7 +63,7 @@ class _MonitorDetailsViewState extends State<MonitorDetailsView> {
                       height: 10,
                     ),
                     Text(
-                      ' ${monitor.user.entidad!.nombre}',
+                      ' ${monitor.user.entidad?.nombre}',
                       style: const TextStyle(
                         fontWeight: FontWeight.w400,
                       ),
@@ -106,14 +106,14 @@ class _MonitorDetailsViewState extends State<MonitorDetailsView> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Column(
-                                children: const [
+                                children: [
                                   Text(
-                                    '5',
-                                    style: TextStyle(
+                                    '${monitor.semestre}',
+                                    style: const TextStyle(
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  Text(
+                                  const Text(
                                     'Semestre',
                                   )
                                 ],

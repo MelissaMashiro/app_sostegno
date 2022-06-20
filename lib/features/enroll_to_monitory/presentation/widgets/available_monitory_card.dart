@@ -159,7 +159,7 @@ class AvailableMonitoryCard extends StatelessWidget {
                   Get.toNamed(
                     RoutesName.MONITOR_DETAILS,
                     arguments: {
-                      'codMonitor': '${monitory.monitorMonitoria.id}',
+                      'codMonitor': '${monitory.monitorMonitoria.monitor!.id}',
                     },
                   );
                 },

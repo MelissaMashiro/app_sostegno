@@ -38,6 +38,7 @@ class AvailableMonitor {
     required this.porcentajes,
     required this.carrera,
     required this.descripcion,
+    required this.semestre,
     required this.monitoriasCount,
   });
 
@@ -46,6 +47,7 @@ class AvailableMonitor {
   final List<MonitorMonitoria> porcentajes;
   final String carrera;
   final String descripcion;
+  final int semestre;
   final int monitoriasCount;
 
   factory AvailableMonitor.fromMap(Map<String, dynamic> json) =>
@@ -56,6 +58,7 @@ class AvailableMonitor {
             json["porcentajes"].map((x) => MonitorMonitoria.fromMap(x))),
         carrera: json["carrera"],
         descripcion: json["descripcion"],
+        semestre: json['semestre'],
         monitoriasCount: json["monitorias_count"],
       );
 }

@@ -94,7 +94,7 @@ class EnrollMonitoryRemoteDataSourceImpl
         resp = await dio.post(
           AppEndpoints.getMateriasByMateriaAndMonitor,
           data: {
-            'idMateria': materia.id,
+            'idMateria': materia.materia.id,
             'idMonitor': monitor.monitor!.id,
           },
           options: Options(

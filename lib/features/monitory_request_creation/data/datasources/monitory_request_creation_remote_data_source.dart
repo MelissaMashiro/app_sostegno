@@ -35,7 +35,7 @@ class MonitoryRequestCreationRemoteDataSourceImpl
       final data = {
         'fecha': '${body['day']} ${body['horaInicio']}',
         'fin': body['horaFin'],
-        'idMateria': body['materia'].id,
+        'idMateria': body['materia'].materia.id,
       };
       await dio.post(
         AppEndpoints.createRequest,
